@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class Main2Activity extends AppCompatActivity {
@@ -30,12 +29,12 @@ public class Main2Activity extends AppCompatActivity {
 
     public void onClick2(View view) {
         Log.d("TAG", "click");
-//        if (!isModeC) {
+        if (!isModeC) {
             group.setVisibility(View.GONE);
-//            isModeC = !isModeC;
-//        } else {
-//            group.setVisibility(View.VISIBLE);
-//            isModeC = !isModeC;
-//        }
+            isModeC = !isModeC;
+        } else {
+            group.setVisibility(View.VISIBLE);
+            isModeC = !isModeC;
+        }
     }
 }
